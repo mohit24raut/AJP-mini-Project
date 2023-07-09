@@ -1,0 +1,61 @@
+
+.dis{
+    font-family: Garamond, serif;
+    font-size: 13vh;
+    color: white;
+}
+#h2feat{
+    text-align: center;
+    margin: 2vh;
+    font-family: cursive;
+    font-size: 5vh;
+}
+
+.safetyimg{
+    width: 100%;
+    height: 100%;
+}
+
+.swachimg{
+    width: 100%;
+    height: 3vh;
+}
+.page{
+    color: white;
+    text-align: center;
+    font-size: medium;
+    margin: 0%;
+}
+.safetyheading{
+    font-family: cursive;
+    text-align: center;
+}
+
+.nav1{
+    background-color: #000000;
+}
+.h11{
+    color: coral;
+}
+.btn1{
+    color: aliceblue;
+}
+.spanbg{
+    
+    background-color: coral;
+}
+.a1{
+    color: aliceblue; 
+    font-weight: lighter; 
+    font-size: large;
+}
+.a2{
+    color: aliceblue;
+    font-weight: lighter;
+    font-size: large;
+    cursor: pointer;
+}
+
+.navColor{
+    color: aliceblue;
+}
