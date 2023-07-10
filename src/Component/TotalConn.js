@@ -84,6 +84,7 @@ export default function TotalConn() {
             </div>
             </div>
         </nav>
+        <div className="container-fluid">
         <div className="row" style={{ marginTop:"5vh"}}>
                     <div className="col">
                         <h1 style={{textAlign:"center", fontFamily:"cursive"}}>Total Consumer Connection</h1>
@@ -123,7 +124,10 @@ export default function TotalConn() {
           </div>
           
         </div>
-        <Footer/>
+        </div>
+        <div className="container-fluid">
+          <Footer/>
+        </div>
       </>
     );
   }

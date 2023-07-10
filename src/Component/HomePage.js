@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./HomePage.css";
 
 export function HomePage() {
+  let navigate = useNavigate();
+  let goToConnection = () => {
+    navigate("/Registration");
+  };
     return(
         <>
             
@@ -33,49 +37,15 @@ export function HomePage() {
 
                   <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto">
-                    <NavDropdown
-                      className="nav-link me-auto fw-normal fs-6 navColor"
-                      title="Register"
-                      id="navbarScrollingDropdown"
-                      
-                    >
-                      <NavDropdown.Item
-                        className="nav-link me-3 fw-normal fs-5"
-                        href="#action3"
-                        style={{
-                          color: "aliceblue",
-                          fontWeight: "lighter",
-                          fontSize: "large",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Secretery Login
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
-                        className="nav-link me-3 fw-normal fs-5"
-                        href="#action4"
-                        style={{
-                          color: "aliceblue",
-                          fontWeight: "lighter",
-                          fontSize: "large",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Memeber Login
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
-                        className="nav-link me-3 fw-normal fs-5"
-                        href="#action4"
-                        style={{
-                          color: "aliceblue",
-                          fontWeight: "lighter",
-                          fontSize: "large",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Admin Login
-                      </NavDropdown.Item>
-                    </NavDropdown>
+                    <li class="nav-item dropdown" style={{color: "aliceblue",fontWeight: "lighter",fontSize: "large"}}>
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{color: "aliceblue",fontWeight: "lighter",fontSize: "large"}}>
+                        Registration
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><Link class="dropdown-item" to={"/UserRegister"}>User Registration</Link></li>
+                        <li><Link class="dropdown-item" to={"/AdminRegistration"}>Admin Registraton</Link></li>
+                      </ul>
+                    </li>
                       <Link
                         className="nav-link"
                         to={"/Login"}
@@ -121,8 +91,9 @@ export function HomePage() {
                 <div className="row d-flex align-items-center justify-content-center "style={{height:"40vh"}}>
                   <div className="col-sm-12 col-md-3 d-flex align-items-center justify-content-center">
                     <div >
-                      <h1 className="text-center">WELCOME</h1>
-                      <input type="button" value="click me" className="d-block mx-auto" />
+                      <h1 className="text-center">WELCOME !</h1>
+                      <p>Create Connection With Us &#128525;</p>
+                      <input type="button" value="Click Me" className="form-control d-block mx-auto bg-warning-subtle fs-4" onClick={goToConnection}/>
                     </div>
                   </div>
 
