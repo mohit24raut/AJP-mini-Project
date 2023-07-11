@@ -10,6 +10,7 @@ export default function TotalConn() {
     useEffect(()=>{onEnter();}, []);
     let onEnter= ()=>{
         let url = `http://localhost:9292/getPendingStatus?status=Approve`;
+        console.log(url);
         axios.post(url).then((response)=>{
             setPending(response.data);
             console.log(response.data);

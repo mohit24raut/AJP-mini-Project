@@ -12,8 +12,8 @@ import UserRegister from './Component/UserRegister';
 import TotalConn from "./Component/TotalConn";
 import ContactUs from "./Component/ContactUs";
 import UserPage from "./Component/UserPage";
-import Booking from "./Component/Booking";
 import BookingHistory from "./Component/BookingHistory";
+import Booking2 from "./Component/Booking2";
 
 function App() {
   return (
@@ -32,8 +32,8 @@ function App() {
             <Route path="/TotalConn" element={<TotalConn/>} />
             <Route path="/ContactUs" element={<ContactUs/>} />
             <Route path="/UserPage" element={<UserPage/>} />
-            <Route path="/Booking" element={<Booking/>} />
             <Route path="/BookingHistory" element={<BookingHistory/>} />
+            <Route path="/Booking2" element={<Booking2/>} />
         </Routes>
       </BrowserRouter>
     </>

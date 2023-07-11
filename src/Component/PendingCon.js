@@ -104,7 +104,7 @@ export default function PendingCon()
                 </div>
 
                 
-                    <div className="row justify-content-center my-1" style={{height:"60vh"}}>
+                    <div className="row justify-content-center my-1" >
                         <div className="col-sm-8 p-1 my-1">
                             
 
@@ -117,9 +117,7 @@ export default function PendingCon()
                                             <div className="col-10">
                                                 <h6>Name :- {item.name}</h6>
                                                 <h6>DOB :- {item.dob}</h6>
-                                                <h6>Mobile :- {item.mobileNo}</h6>
                                                 <h6>Email Id :- {item.eamil}</h6>
-                                                <h6>Addhar No. :- {item.aadharNo}</h6>
                                                 <h6>Status :- <span style={{color:"red"}}>Pending</span></h6>
                                                 <Button variant="primary" onClick={()=>Approved(item)}>
                                                     Click Here
@@ -130,7 +128,7 @@ export default function PendingCon()
                                 ))}
                         </div>
                     </div>
-                <Footer/>
+                <Footer className="sticky-bottom"/>
             </div>
         </>
     )

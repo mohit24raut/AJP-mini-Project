@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css"
+import Footer from "./Footer";
 //import { useNavigate } from "react-router-dom";
 //import { Link } from "react-router-dom";
 
@@ -30,8 +31,10 @@ export default function Login() {
         username: "", password: "" 
       };
       setUser(newuser);
+
       if(response.data === "User")
       {
+        
         navigate("/UserPage");
       }
       else if(response.data === "Admin")
@@ -47,6 +50,79 @@ export default function Login() {
   };
   return (
     <>
+      <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#000000" }}>
+                <div className="container-fluid">
+                  
+                  <h1 className="navbar-brand gram-app fs-1 my-1" style={{ color: "coral" }}>
+                      <a className="navbar-brand" href="#">
+                          <img src="/gasForNav.jpg" alt="Logo" width="90" height="40" class="d-inline-block align-text-top"/>
+                          <span className="navbar-brand gram-app fs-1 my-1" style={{ color: "coral" }}>CDAC Gas</span>
+                      </a>
+                  </h1>
+                  <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    style={{ color: "aliceblue" }}
+                  >
+                    <span
+                      className="navbar-toggler-icon"
+                      style={{ backgroundColor: "coral" }}
+                    ></span>
+                  </button>
+
+                  <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div className="navbar-nav ms-auto">
+                    <Link
+                        className="nav-link"
+                        to={"/"}
+                        style={{
+                          color: "aliceblue",
+                          fontWeight: "lighter",
+                          fontSize: "large",
+                        }}
+                        >Home
+                      </Link>
+                      <Link
+                        className="nav-link"
+                        to={"/Login"}
+                        style={{
+                          color: "aliceblue",
+                          fontWeight: "lighter",
+                          fontSize: "large",
+                        }}
+                        >Login
+                      </Link>
+                      <Link
+                        className="nav-link "
+                        to={"/About"}
+                        style={{
+                          color: "aliceblue",
+                          fontWeight: "lighter",
+                          fontSize: "large",
+                          cursor: "pointer",
+                        }}
+                        >About Us
+                      </Link>
+                      <Link
+                        className="nav-link"
+                        to={"/ContactUs"}
+                        style={{
+                          color: "aliceblue",
+                          fontWeight: "lighter",
+                          fontSize: "large",
+                          cursor: "pointer",
+                        }}
+                        >Contact Us
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </nav>
       <div className="container-fluid">
         <div className="row " style={{ height: "100vh" }}>
                 <div className="col-4" >
@@ -102,6 +178,7 @@ export default function Login() {
             </div>
           </div>
         </div>
+        <Footer/>
       </div>
     </>
   );

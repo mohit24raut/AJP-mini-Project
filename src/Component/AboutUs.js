@@ -1,9 +1,83 @@
 import "./AboutUs.css";
+import { Link, useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 export default function About()
 {
         return (
             <>
+              <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#000000" }}>
+                <div className="container-fluid">
+                  
+                  <h1 className="navbar-brand gram-app fs-1 my-1" style={{ color: "coral" }}>
+                      <a className="navbar-brand" href="#">
+                          <img src="/gasForNav.jpg" alt="Logo" width="90" height="40" class="d-inline-block align-text-top"/>
+                          <span className="navbar-brand gram-app fs-1 my-1" style={{ color: "coral" }}>CDAC Gas</span>
+                      </a>
+                  </h1>
+                  <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    style={{ color: "aliceblue" }}
+                  >
+                    <span
+                      className="navbar-toggler-icon"
+                      style={{ backgroundColor: "coral" }}
+                    ></span>
+                  </button>
+
+                  <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div className="navbar-nav ms-auto">
+                    <li class="nav-item dropdown" style={{color: "aliceblue",fontWeight: "lighter",fontSize: "large"}}>
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{color: "aliceblue",fontWeight: "lighter",fontSize: "large"}}>
+                        Registration
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><Link class="dropdown-item" to={"/UserRegister"}>User Registration</Link></li>
+                        <li><Link class="dropdown-item" to={"/AdminRegistration"}>Admin Registraton</Link></li>
+                      </ul>
+                    </li>
+                      <Link
+                        className="nav-link"
+                        to={"/Login"}
+                        style={{
+                          color: "aliceblue",
+                          fontWeight: "lighter",
+                          fontSize: "large",
+                        }}
+                        >Login
+                      </Link>
+                      <Link
+                        className="nav-link "
+                        to={"/About"}
+                        style={{
+                          color: "aliceblue",
+                          fontWeight: "lighter",
+                          fontSize: "large",
+                          cursor: "pointer",
+                        }}
+                        >About Us
+                      </Link>
+                      <Link
+                        className="nav-link"
+                        to={"/ContactUs"}
+                        style={{
+                          color: "aliceblue",
+                          fontWeight: "lighter",
+                          fontSize: "large",
+                          cursor: "pointer",
+                        }}
+                        >Contact Us
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </nav>
               <div className="container-fluid">
                 <section className="hero">
                   <div className="heading">
@@ -109,7 +183,7 @@ export default function About()
                 <div className="col-sm-12 col-md-3">
                   <div className="card">
                     <img
-                      src="WhatsApp Image 2023-06-11 at 23.30.08.jpeg"
+                      src="Ar.jpeg"
                       className="card-img-top imgUs"
                       alt=""
                     />
@@ -125,7 +199,7 @@ export default function About()
                 <div className="col-sm-12 col-md-3">
                   <div className="card">
                     <img
-                      src="IMG_20220206_133448_673.jpg"
+                      src="Mr.jpg"
                       className="card-img-top imgUs"
                       alt=""
                     />
@@ -141,7 +215,7 @@ export default function About()
                 <div className="col-sm-12 col-md-3">
                   <div className="card">
                     <img
-                      src="IMG_20200411_131612_581.jpg"
+                      src="Ag.jpeg"
                       className="card-img-top imgUs"
                       alt=""
                     />
@@ -155,33 +229,7 @@ export default function About()
                 </div>
               </div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <div
-                className="row bg-dark justify-content-center align-item-center"
-                style={{
-                  boxSizing: "border-box",
-                  margin: "0%",
-                  padding: "1vh",
-                }}
-              >
-                <div className="col-sm-6 ">
-                  <p className="page">
-                    Content on this website is owned, updated, and managed by the 
-                    CDAC Cooking Gas pvt lmt, Government of India.
-                  </p>
-                  <p className="page">Designed and Developed by CDAC Mumbai</p>
-                  <p className="page">Follow Us On</p>
-                </div>
-                <div className="col-sm-5 ">
-                  <p className="page">
-                    Toll FREE Number: 1800-2333-555
-                  </p>
-                  <p className="page">Commercial LPG Helpline No. 1860-5991-111</p>
-                  <p className="page">Last updated on 03/07/2023 01:10 PM</p>
-                </div>
-                <div className="col-sm-1">
-                  <img src="https://1.bp.blogspot.com/-3hatBLgnA6M/VwnzLx9ZcqI/AAAAAAAAE74/z5dQE1VgjFg4sWJ4yp2laew6sOfwVV0Sg/s1600/wsscc-to-support-swachh-bharat-slider.png" className="swachimg"/>
-                </div>
-              </div>
+              <Footer/>
             </>
           );
 }

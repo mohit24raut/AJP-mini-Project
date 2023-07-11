@@ -89,8 +89,14 @@ export default function Stock()
                     <div className="col-6">
                         <img src="1c.jpg" alt="" style={{width:"50vw", height:"100vh"}}/>
                     </div>
+                
                     <div className="col-6">
-                        <div className="row justify-content-center py-5">
+                        <div className="row">
+                            <div className="col">
+                                <h1 style={{textAlign:"center", fontFamily:"cursive"}}>Stock</h1>
+                            </div>
+                        </div>
+                        <div className="row justify-content-center py-2">
                             <div className="col">
                                 <Card style={{ width: "16rem" }}>
                                     <img
@@ -99,10 +105,53 @@ export default function Stock()
                                         width={200} // Adjust the value to change the width
                                     />
                                     <Card.Body>
-                                        <Card.Title>Pending Connection</Card.Title>
-                                        <Button variant="primary">
-                                        Click Here
-                                        </Button>
+                                        <Card.Title>Type: LPG 14.2 Kg</Card.Title>
+                                        <h6>Price: 1023.98</h6>
+                                        <h6>Quantity: 256</h6>
+                                    </Card.Body>
+                                </Card>
+                            </div>
+                            <div className="col">
+                                <Card style={{ width: "16rem" }}>
+                                    <img
+                                        src="/Connection.png"
+                                        className="card-img-top imgCard"
+                                        width={200} // Adjust the value to change the width
+                                    />
+                                    <Card.Body>
+                                        <Card.Title>Type: LPG 19 Kg</Card.Title>
+                                        <h6>Price: 1698.98</h6>
+                                        <h6>Quantity: 1000</h6>
+                                    </Card.Body>
+                                </Card>
+                            </div>
+                        </div>
+                        <div className="row justify-content-center py-2">
+                            <div className="col">
+                                <Card style={{ width: "16rem" }}>
+                                    <img
+                                        src="/Connection.png"
+                                        className="card-img-top imgCard"
+                                        width={200} // Adjust the value to change the width
+                                    />
+                                    <Card.Body>
+                                        <Card.Title>Type: LPG 5 Kg</Card.Title>
+                                        <h6>Price: 500</h6>
+                                        <h6>Quantity: 56</h6>
+                                    </Card.Body>
+                                </Card>
+                            </div>
+                            <div className="col">
+                                <Card style={{ width: "16rem" }}>
+                                    <img
+                                        src="/Connection.png"
+                                        className="card-img-top imgCard"
+                                        width={200} // Adjust the value to change the width
+                                    />
+                                    <Card.Body>
+                                        <Card.Title>Type: LPG 7 Kg</Card.Title>
+                                        <h6>Price: 790.98</h6>
+                                        <h6>Quantity: 206</h6>
                                     </Card.Body>
                                 </Card>
                             </div>

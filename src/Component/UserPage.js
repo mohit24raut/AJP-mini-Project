@@ -1,4 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
+
+import { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,8 +10,40 @@ import Footer from "./Footer";
 function UserPage() {
 
     let navigate = useNavigate();
+
+    //Fetch From cookies
+    const cookies = document.cookie.split(';');
+          let password = '';
+          let username = '';
+    useEffect(() => {
+        
+
+        const getLastCookie = () => {
+          
+    
+          cookies.forEach((cookie) => {
+            const [cookieName, cookieValue] = cookie.split('=');
+            const trimmedName = cookieName.trim();
+            const trimmedValue = cookieValue.trim();
+    
+            if (trimmedName === 'password') {
+                password = trimmedValue;
+            } else if (trimmedName === 'username') {
+                username = trimmedValue;
+            }
+          });
+    
+          console.log('password:', password);
+          console.log('username:', username);
+        
+        };
+        getLastCookie();
+       
+      }, []);
+
+    
   let goToBooking = () => {
-    navigate("/Booking");
+    navigate("/Booking2");
   };
   let goToHistory = () => {
     navigate("/BookingHistory");
@@ -100,7 +134,7 @@ function UserPage() {
                 <div className="col mb-4">
                     <Card style={{ width: "16rem" }}>
                     <img
-                        src=""
+                        src=" History.jpeg"
                         className="card-img-top imgCard"
                         width={200} // Adjust the value to change the width
                     />
@@ -115,7 +149,7 @@ function UserPage() {
                 <div className="col mb-4">
                     <Card style={{ width: "16rem" }}>
                     <img
-                        src=""
+                        src="bookingcy.jpeg"
                         className="card-img-top imgCard"
                         width={200} // Adjust the value to change the width
                     />

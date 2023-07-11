@@ -64,8 +64,24 @@ export default function UserRegister() {
       }
       else if(response.data === "Register")
       {
-        alert("Register Successfully");
-        navigate("/");
+
+        //Cookies
+        const expiryDate = new Date();
+        expiryDate.setTime(expiryDate.getTime()+1*60*60*1000);
+
+        const cookieValues=[
+          `id=${user.providedConsu_id}`,
+          `username1=${user.username}`,
+          `password1=${user.password}`,
+        ];
+
+        cookieValues.forEach((cookie)=>{
+          document.cookie=
+          cookie+`: expires=${expiryDate.toUTCString()}; path=/`;
+        })
+        navigate("/UserPage");
+
+
       }
       else if(response.data === "Connection")
       {
